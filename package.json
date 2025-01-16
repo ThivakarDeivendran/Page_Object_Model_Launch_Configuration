@@ -1,0 +1,22 @@
+{
+  "name": "Page_Object_Model_launch_Configuration_Project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:DEV": "BASE_URL=https://www.saucedemo.com npx playwright test",
+    "test:TEST": "BASE_URL=https://www.facebook.com/login npx playwright test",
+    "test:ACPT": "BASE_URL=https://www.youtube.com/account npx playwright test",
+    "test:PROD": "BASE_URL=https://www.instagram.com npx playwright test"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/node": "^22.10.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}

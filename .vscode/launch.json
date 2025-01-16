@@ -1,0 +1,53 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "name": "DEV Environment",
+        "request": "launch",
+        "program": "${workspaceFolder}/tests/classFile.spec.ts",
+        "runtimeArgs": ["--loader","ts-node/esm"],
+        "resolveSourceMapLocations": [
+          "${workspaceFolder}/**",
+          "!**/node_modules/**"
+        ],
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "BASE_URL": "https://www.saucedemo.com"
+        },
+        "console": "integratedTerminal"
+      },
+      {
+        "type": "node",
+        "name": "TEST Environment",
+        "request": "launch",
+        "program": "${workspaceFolder}/tests/classFile.spec.ts",
+        "env": {
+          "BASE_URL": "https://www.facebook.com/login"
+        },
+        "console": "integratedTerminal"
+      },
+      {
+        "type": "node",
+        "name": "STAG Environment",
+        "request": "launch",
+        "program": "${workspaceFolder}\\tests\\classFile.ts",
+        "env": {
+          "BASE_URL": "https://www.youtube.com/account"
+        },
+        "console": "integratedTerminal"
+      },
+      {
+        "type": "node",
+        "name": "PROD Environment",
+        "request": "launch",
+       "program": "${workspaceFolder}\\tests\\classFile.ts",
+        "args": ["test"],
+        "env": {
+          "BASE_URL": "https://www.instagram.com"
+        },
+        "console": "integratedTerminal"
+      }
+    ]
+  }
+  
