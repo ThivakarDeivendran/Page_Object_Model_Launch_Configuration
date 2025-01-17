@@ -1,12 +1,8 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const baseURL = process.env.BASE_URL;
-
 export default defineConfig({
   use:{
-    baseURL,
-    browserName:'chromium',
-    headless:false,
+    baseURL: process.env.BASE_URL,
   },
   testDir: './tests',
   /* Run tests in files in parallel */

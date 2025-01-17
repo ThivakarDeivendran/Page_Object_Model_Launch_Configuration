@@ -5,3 +5,4 @@ test('Test playwright config', async ({ page }) => {
   const title = await page.title();
   console.log('Page title:    ', title);
 });
+

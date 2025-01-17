@@ -5,23 +5,20 @@
         "type": "node",
         "name": "DEV Environment",
         "request": "launch",
-        "program": "${workspaceFolder}/tests/classFile.spec.ts",
-        "runtimeArgs": ["--loader","ts-node/esm"],
-        "resolveSourceMapLocations": [
-          "${workspaceFolder}/**",
-          "!**/node_modules/**"
-        ],
-        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+        "args": ["test","--headed"],
         "env": {
           "BASE_URL": "https://www.saucedemo.com"
         },
         "console": "integratedTerminal"
+        
       },
       {
         "type": "node",
         "name": "TEST Environment",
         "request": "launch",
-        "program": "${workspaceFolder}/tests/classFile.spec.ts",
+        "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+        "args": ["test"],
         "env": {
           "BASE_URL": "https://www.facebook.com/login"
         },
@@ -31,7 +28,8 @@
         "type": "node",
         "name": "STAG Environment",
         "request": "launch",
-        "program": "${workspaceFolder}\\tests\\classFile.ts",
+        "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+        "args": ["test"],
         "env": {
           "BASE_URL": "https://www.youtube.com/account"
         },
@@ -41,7 +39,7 @@
         "type": "node",
         "name": "PROD Environment",
         "request": "launch",
-       "program": "${workspaceFolder}\\tests\\classFile.ts",
+       "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
         "args": ["test"],
         "env": {
           "BASE_URL": "https://www.instagram.com"
@@ -50,4 +48,3 @@
       }
     ]
   }
-  
